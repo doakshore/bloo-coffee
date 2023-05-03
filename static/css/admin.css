@@ -1,0 +1,114 @@
+/* Custom styles for Admin panel */
+
+/* Style for the container */
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container {
+    margin-top: 30px;
+  }
+
+  /* Style for the card header */
+  .card-header {
+    background-color: #1e88e5;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  /* Style for the tab links */
+  .nav-link {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e88e5;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    margin-right: 10px;
+  }
+
+  /* Style for the active tab link */
+  .nav-link.active {
+    background-color: #1e88e5;
+    color: #fff;
+    border: 1px solid #1e88e5;
+  }
+
+  /* Style for the tab panes */
+  .tab-pane {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 5px 5px 5px;
+    padding: 20px;
+  }
+
+  /* Style for the table in the tab panes */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #2196F3;
+    color: #fff;
+  }
+
+  /* Style for the "Add Flavor" and "Add Admin" buttons */
+  .btn {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #2196F3;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .btn:hover {
+    background-color: #1565c0;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* Responsive design */
+  @media screen and (max-width: 768px) {
+    /* Style for the tab links on small screens */
+    .nav-link {
+      font-size: 16px;
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+
+    /* Style for the tab panes on small screens */
+    .tab-pane {
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    /* Style for the table on small screens */
+    table {
+      font-size: 14px;
+    }
+
+    /* Style for the "Add Flavor" and "Add Admin" buttons on small screens */
+    .btn {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  }

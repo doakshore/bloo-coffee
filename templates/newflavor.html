@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %} Add New Flavor {% endblock %}
+
+{% block content %}
+<main class="container my-5">
+  <div class="card text-center">
+    <h1 class="card-header">New Flavor</h1>
+    <div class="card-body">
+      <p class="card-text">Add a new product to the database!</p>
+      <form action="/newflavor" method="post" class="animate__animated animate__fadeIn">
+        <div class="mb-3">
+          <label for="flavor_name" class="form-label">Name:</label>
+          <input type="text" id="flavor_name" name="flavor_name" required class="form-control" placeholder="Example. Banana Blast">
+        </div>
+        <div class="mb-3">
+          <label for="flavor_description" class="form-label">Description:</label>
+          <textarea id="flavor_description" name="flavor_description" required class="form-control" rows="4" placeholder="A luscious blend of ripe bananas and smooth coffee, creating a rich and creamy flavor explosion. Topped with whipped cream and a sprinkle of cinnamon, it's a tropical delight for any time of day. Sip, savor, and experience the ultimate banana-coffee bliss!"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <div class="alert alert-success mt-3">
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endwith %}
+    </div>
+  </div>
+</main>
+{% endblock %}

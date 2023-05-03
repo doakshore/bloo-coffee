@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+Homepage
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/css/index.css">
+
+<main class="main-content">
+  <section class="hero-section">
+    <div class="image-background">
+      <img src="{{ url_for('static', filename='images/stock (35).jpg') }}" alt="coffee beans">
+    </div>
+  </section>
+  <section class="content-section">
+    <div class="container">
+      <div class="brand-section">
+        <h1 class="brand-title">Welcome to Bloo Coffee!</h1>
+      </div>
+      <h2 class="section-title">Homepage</h2>
+    </div>
+  </section>
+</main>
+
+{% endblock %}

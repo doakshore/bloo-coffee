@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}
+Admin
+{% endblock %}
+{% block styles %}
+<!-- Add any additional styles here -->
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script><!-- Layout for data table -->
+<link rel="stylesheet" href="/static/css/admin.css">
+{% endblock %}
+{% block content %}
+    <main class="container">
+        <div class="card text-center">
+            <h1 class="card-header">Welcome to the Admin Panel</h1>
+            <div class="card-body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="user-tab" data-toggle="tab" href="#user" role="tab"
+                            aria-controls="user" aria-selected="true">User Data</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="flavor-tab" data-toggle="tab" href="#flavor" role="tab"
+                            aria-controls="flavor" aria-selected="false">Flavor Data</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="top-flavor-tab" data-toggle="tab" href="#top-flavor" role="tab"
+                            aria-controls="top-flavor" aria-selected="false">Top Flavor Data</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="admins-tab" data-toggle="tab" href="#admins" role="tab"
+                            aria-controls="admins" aria-selected="false">Admins</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="/addnewflavor">Add Flavor</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="/newadmin">Add Admin</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Tab panes -->
+        <div class="tab-content" id="myTabContent">
+            <!-- User tab -->
+            <div class="tab-pane fade show active" id="user" role="tabpanel" aria-labelledby="user-tab">
+                <h2 class="text-center">User Data</h2>
+                {{ user_table|safe }}
+            </div>
+            <!-- Flavor tab -->
+            <div class="tab-pane fade" id="flavor" role="tabpanel" aria-labelledby="flavor-tab">
+                <h2 class="text-center">Flavor Data</h2>
+                {{ flavor_table|safe }}
+            </div>
+            <!-- Top tab -->
+            <div class="tab-pane fade" id="top-flavor" role="tabpanel" aria-labelledby="top-flavor-tab">
+                <h2 class="text-center">Top Flavor Data</h2>
+                {{ top_flavor_table|safe }}
+            </div>
+            <!-- admin tab -->
+            <div class="tab-pane fade" id="admins" role="tabpanel" aria-labelledby="admins-tab">
+                <h2 class="text-center">Admin Data</h2>
+                {{ admins_table|safe }}
+            </div>
+            <!-- New Flavor tab -->
+            <div class="tab-pane fade" id="admin" role="tabpanel" aria-labelledby="admin-tab">
+                <h2 class="text-center">Add New Flavor</h2>
+                <div w3-include-html="newflavor.html"></div>
+            </div>
+        </div>
+    </main>
+</body>
+{% endblock %}

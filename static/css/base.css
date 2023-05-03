@@ -1,0 +1,138 @@
+:root {
+    --font-family-base: 'Lato', sans-serif;
+    --font-size-base: 1.6rem;
+    --color-background: #F8F8FF;
+    --color-text: #19171B;
+    --accent-color: #FFC107; /* Amber */
+    --accent-color2: #F446C2; /* Rich Berry */
+    --accent-color3: #F27346; /* Muted Coral */
+    --color-neutral: #1A1E25;
+    --color-neutral-dark:#19171B;
+    --logo-size: 90px;
+}
+
+/*navbar header*/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 180px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(20px) opacity(98%);
+    z-index: 9999;
+    transition: all 0.3s ease-out;
+    filter: brightness(1.2) saturate(1.2);
+    transform: scale(1.05);
+  }
+
+
+.logo-container {
+
+    position: relative;
+}
+
+.logo-container img:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.logo-container img {
+    display: block;
+    margin: 0 auto;
+    height: var(--logo-size);
+    display: flex;
+    opacity: 70%;
+}
+
+.logo p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 27px 0 0;
+    padding: 0;
+    color: var(--color-text);
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 90%;
+    transition: width 0.3s ease, opacity 0.4s ease;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: center;
+    top: 10px;
+}
+
+.navbar-menu-items {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu-link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: bold;
+    font: var(--font-family-base);
+    font-size: var(--font-size-base);
+    transition: width 0.3s ease, opacity 0.4s ease;
+    padding: 1px 7px;
+    border-radius: 5px;
+}
+
+.navbar-menu-link:hover {
+    color: var(--accent-color);
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+}
+
+footer {
+    color: var(--color-background);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.icon {
+    margin: 0 0.5rem;
+}
+
+.icon-type {
+    font-size: 1.5rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.icon-type:hover {
+    color: var(--accent-color);
+}
+
+.company {
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.seo {
+    font-size: 0.8rem;
+    color: var(--color-text);
+}
+
+@media screen and (max-width: 576px) {
+    .icon-type {
+        font-size: 0.9rem;
+    }
+
+    .company {
+        font-size: 0.8rem;
+    }
+
+    .seo {
+        font-size: 0.7rem;
+    }
+
+    /* Other styles... */
+
+}

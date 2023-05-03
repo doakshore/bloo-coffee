@@ -1,0 +1,495 @@
+/* Set the root color palette */
+:root {
+  /* Primary Colors */
+  --primary-color: #F8F8FF;
+  /* Off White */
+  --secondary-color: #19171B;
+  /* Dark Charcoal */
+  --accent-color: #FFC107;
+  /* Amber */
+  --accent-color2: #F446C2;
+  /* Rich Berry */
+  --accent-color3: #F27346;
+  --color-text: #19171B;
+  --color-text2: #fff;
+
+  /* Text Colors */
+  --main-text-color: var(--secondary-color);
+  --subtitle-color: var(--accent-color);
+  --hover-color: var(--accent-color3);
+  --font-family-base: 'Lato', sans-serif;
+  --font-size-base: 1.6rem;
+
+  /* New styles for transitions */
+  --hover-opacity: 0.2;
+  --spread: 10px;
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the Our Story section */
+#our-story {
+  background-color: var(--primary-color);
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.headline h2 {
+  font-size: 3.6rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+  margin-bottom: 40px;
+  transition: color 0.5s ease-in-out;
+}
+
+.story-text {
+  font-size: 2.4rem;
+  color: var(--main-text-color);
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding: 0 20px;
+  transition: transform 1s ease-in-out, background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+.story-text br {
+  display: none;
+}
+
+.story-text::before {
+  content: open-quote;
+  color: var(--accent-color);
+  font-size: 4rem;
+  line-height: 0;
+  margin-right: 10px;
+}
+
+.story-text::after {
+  content: close-quote;
+  color: var(--accent-color);
+  font-size: 4rem;
+  line-height: 0;
+  margin-left: 10px;
+}
+
+.story-text:hover {
+  transform: scale(1.2);
+  color: var(--color-text1);
+}
+
+
+/* Team section */
+#our-team {
+  background-color: var(--primary-color);
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#our-team h2 {
+  font-size: 3.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.all-persons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* Person card */
+.person {
+  width: 290px;
+  height: 354px;
+  padding: 2rem 1.5rem;
+  margin: 1rem;
+  background: var(--primary-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow .3s ease, transform .2s ease;
+}
+
+.person:hover {
+  transform: translateY(-5%);
+  box-shadow: 0 8px 50px rgba(0, 0, 0, var(--hover-opacity));
+}
+
+/* Avatar */
+.Avatar {
+  --size: 170px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: transform .2s ease;
+}
+
+.Avatar:hover {
+  box-shadow: -10px -10px var(--spread) 0px var(--accent-color2),
+    0 -10px var(--spread) 0px var(--accent-color3),
+    10px -10px var(--spread) 0px var(--accent-color),
+    10px 0 var(--spread) 0px var(--accent-color),
+    10px 10px var(--spread) 0px var(--accent-color2),
+    0 10px var(--spread) 0px var(--accent-color),
+    -10px 10px var(--spread) 0px var(--accent-color3);
+}
+
+/* Card info */
+.card-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
+  font: var(--font-family-base)var(--text-color);
+}
+
+.card-subtitle {
+  font-size: var(--font-size-base);
+  margin-bottom: 1rem;
+  color: var(--subtitle-color);
+}
+
+/* Adjust space between social items */
+.person .card-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+/* Social media icons */
+.card-social {
+  transform: translateY(0%);
+}
+
+/* Style for SVG icon */
+.svg {
+  margin-right: 1px;
+  color: var(--secondary-color);
+  left: -4px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Style for SVG icon on hover */
+.svg:hover {
+  color: var(--accent-color);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffffff, #dfdfe6);
+  box-shadow: 10px 10px 30px #d3d3d9, -10px -10px 30px #ffffff;
+}
+
+/* Remove bullets from list */
+.no-bullets {
+  list-style: none;
+}
+
+
+/*Our-values*/
+
+#our-values {
+  background-color: var(--primary-color);
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#our-values h2 {
+  font-size: 3.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.container-values {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 3rem;
+  justify-content: center;
+}
+
+.value-card {
+  background-color: var(--primary-color);
+  color: var(--color-text);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  overflow: hidden;
+
+}
+
+.value-card:hover {
+  background-color: var(--secondary-color);
+  color: var(--color-text2);
+  overflow: hidden;
+  transform: translateY(-5px);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  align-items: center;
+
+}
+
+.value-card:hover .value-img:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.value-card img {
+  --size: 400px;
+  width: var(--size);
+  height: calc(var(--size) * 16 / 9);
+  object-fit: cover;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Updated styles for transitions */
+.value-card:hover img {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(30px);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  transform: scale(1.1);
+}
+
+.value-card:hover img+.value-text {
+  display: flex;
+
+}
+
+.value-text {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/*hover text*/
+.value-card:hover .value-text {
+  display: flex;
+}
+
+.value-card:hover .value-card-subtitle {
+  display: block;
+}
+
+
+
+/* Our Products section */
+#our-products {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 0;
+}
+
+/* Products heading */
+#our-products h2 {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Products carousel */
+
+/* Set the dimensions and aspect ratio of the product card */
+.product-card {
+  width: 100vw;
+  height: 47.619vw;
+  /* This is the equivalent of 21:9 aspect ratio */
+  max-width: 2560px;
+  max-height: 1080px;
+  overflow: hidden;
+  position: relative;
+  /* Added to make absolute positioning of image possible */
+}
+
+/* Set the dimensions and position of the product image */
+.product-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* Centers the image within the parent element */
+}
+
+
+/* Set the position of the image for each product */
+/* Adjust to move image up or down */
+/* Adjust to move image left or right */
+.product-card img[alt='Classic Favorites'] {
+  top: 10%;
+  left: 50%;
+}
+
+.product-card img[alt='Seasonal Specials'] {
+  top: 30%;
+  left: 50%;
+}
+
+.product-card img[alt='Specialty Drinks'] {
+  top: 69%;
+  left: 50%;
+}
+
+.product-card img[alt='Iced Drinks'] {
+  top: 33%;
+  left: 50%;
+}
+
+.product-card img[alt='Snacks and Pastries'] {
+  top: 25%;
+  left: 50%;
+}
+
+/* Set the position and size of the carousel caption */
+.carousel-caption {
+  object-fit: cover;
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
+  color: var(--color-text2);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* Center align the lead text */
+.lead {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+/* Center align the details text */
+.details {
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+
+/* Carousel indicators */
+#product-carousel .carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#product-carousel .carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: var(--light-color);
+  background-clip: padding-box;
+  border: none;
+  border-radius: 50%;
+}
+
+#product-carousel .carousel-indicators .active {
+  background-color: var(--secondary-color);
+}
+
+
+
+/* Carousel controls */
+#product-carousel .carousel-control-prev,
+#product-carousel .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  margin-top: -22.5px;
+  filter: blur(25px);
+  padding: 15px;
+  border-radius: 50%;
+
+  text-align: center;
+  background-color: var(--color-text2);
+  opacity: 25%;
+  transition: all 0.5s ease-in-out;
+}
+
+#product-carousel .carousel-control-prev:hover,
+#product-carousel .carousel-control-next:hover {
+  transform: scale(1.2);
+  filter: blur(20px);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+#product-carousel .carousel-control-prev:focus,
+#product-carousel .carousel-control-next:focus {
+  outline: none;
+  box-shadow: none;
+  color: var(--secondary-color);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#product-carousel .carousel-control-prev span,
+#product-carousel .carousel-control-next span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+}
+
+#product-carousel .carousel-control-prev {
+  left: 15px;
+}
+
+#product-carousel .carousel-control-next {
+  right: 15px;
+}

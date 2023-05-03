@@ -1,0 +1,348 @@
+<!--about.html-->
+{% extends "base.html" %}
+
+{% block title %}
+About Us
+{% endblock %}
+{% block styles %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
+{% block head %}
+<meta name="description"
+    content="Bloo Coffee is a specialty coffee shop that offers creative and delicious coffee drinks for every taste. Our passionate team of baristas is dedicated to crafting unique and memorable drinks that are sure to satisfy any coffee lover's cravings.">
+{% endblock %}
+{% block content %}
+<main class="main-container">
+    <section id="our-story">
+        <div class="story-container">
+            <div class="headline">
+                <h2>Our Story</h2>
+            </div>
+            <div class="story">
+                <p class="story-text">Bloo Coffee was born out of a love for creative and delicious coffee drinks.
+                    <br> Our team of passionate baristas works tirelessly to create unique and exciting blends that are
+                    sure to satisfy any coffee lover's cravings.
+                    <br> We believe that coffee should be an experience, and we strive to create drinks that are both
+                    delicious and memorable.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="our-values">
+        <h2>Our Values</h2>
+        <div class="values-container">
+            <div class="value-card">
+                <div>
+                    <img class="value-img" src="{{ url_for('static', filename='images/stock (34).jpg') }}"
+                        alt="coffeemachine">
+                </div>
+                <div class="value-text">
+                    <h3 class="value-card-title">Innovation</h3>
+                    <p class="value-card-subtitle">Bloo Coffee is constantly striving to push the boundaries of what is
+                        possible with coffee. They are dedicated to experimenting with new flavors, brewing techniques,
+                        and
+                        presentation styles to create drinks that are truly unique and memorable.</p>
+
+                </div>
+                <div class="value-card">
+                    <img class="value-img" src="{{ url_for('static', filename='images/stock (26).jpg') }}"
+                        alt="coffee beans">
+                </div>
+                <div class="value-text">
+                    <h3 class="value-card-title">Quality</h3>
+                    <p class="value-card-subtitle">We source the highest-quality coffee beans and ingredients to create
+                        drinks that are both delicious and memorable.</p>
+
+                </div>
+                <div class="value-card">
+                    <div>
+                        <img class="value-img" src="{{ url_for('static', filename='images/stock (17).jpg') }}"
+                            alt="Berry cofaine drinks">
+                    </div>
+                    <div class="value-text">
+                        <h3 class="value-card-title">Creativity</h3>
+                        <p class="value-card-subtitle">We love experimenting with new flavors and ingredients to create
+                            unique and exciting coffee blends that surprise and delight our customers.</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div>
+                        <img class="value-img" src="{{ url_for('static', filename='images/stock (30).jpg') }}"
+                            alt="aroma">
+                    </div>
+                    <div class="value-text">
+                        <h3 class="value-card-title">Mission</h3>
+                        <p class="value-card-subtitle">At Bloo Coffee, our mission is simple: to provide our customers
+                            with
+                            the best coffee experience possible. We believe that every cup of coffee should be an
+                            adventure, and we work tirelessly to create unique and exciting blends that are sure to
+                            satisfy any coffee lover's cravings. Whether you're looking for a classic favorite or a
+                            creative blend, we have something for everyone. We are committed to serving our
+                            community with passion and excellence, and we look forward to sharing our love of coffee
+                            with you.</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div>
+                        <img class="value-img" src="{{ url_for('static', filename='images/stock (33).jpg') }}"
+                            alt="People in cafe">
+                    </div>
+                    <div class="value-text">
+                        <h3 class="value-card-title">Community</h3>
+                        <p class="value-card-subtitle">We believe that coffee has the power to bring people together,
+                            and we
+                            strive to create a welcoming and inclusive environment where everyone feels at home.</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div>
+                        <img class="value-img" src="{{ url_for('static', filename='images/stock (32).jpg') }}"
+                            alt="Field">
+                    </div>
+                    <div class="value-text">
+                        <h3 class="value-card-title">Sustainability</h3>
+                        <p class="value-card-subtitle">Bloo Coffee is committed to minimizing its environmental impact
+                            by
+                            using sustainable practices throughout its operations. This includes sourcing coffee beans
+                            from
+                            ethical and sustainable farms, using eco-friendly packaging, reducing waste, and
+                            implementing
+                            energy-efficient systems in its shops. The company believes that sustainability is not only
+                            important for the planet, but also for the long-term success of its business and the coffee
+                            industry as a whole.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <section id="our-products">
+        <div class="container-products">
+            <h2>Our Products</h2>
+            <div class="carousel">
+                <div id="product-carousel" class="carousel slide" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#product-carousel" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#product-carousel" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#product-carousel" data-bs-slide-to="2"></li>
+                        <li data-bs-target="#product-carousel" data-bs-slide-to="3"></li>
+                        <li data-bs-target="#product-carousel" data-bs-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <article class="carousel-item active">
+                            <div class="product-card">
+                                <img class="product-img" src="{{ url_for('static', filename='images/stock (1).jpg') }}"
+                                    alt="Classic Favorites">
+                                <div class="carousel-caption">
+                                    <h3 class="lead">Classic Favorites</h3>
+                                    <p class="details">Our classic favorites include traditional coffee drinks like
+                                        cappuccinos, lattes, and americanos. We use high-quality beans and expert
+                                        brewing techniques to ensure that every drink is perfectly balanced and
+                                        delicious.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="carousel-item">
+                            <div class="product-card">
+                                <img class="product-img" src="{{ url_for('static', filename='images/stock (8).jpg') }}"
+                                    alt="Seasonal Specials">
+                                <div class="carousel-caption">
+                                    <h3 class="lead">Seasonal Specials</h3>
+                                    <p class="details">Looking for a drink that will satisfy your sweet tooth and
+                                        awaken
+                                        your taste buds? Try our Seasonal Special, the Passion Pinata! Bursting with
+                                        juicy passion fruit flavor, this refreshing beverage will transport you
+                                        straight
+                                        to a tropical paradise. Don't miss out on this limited time offer, try the
+                                        Passion Pinata today!</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="carousel-item">
+                            <div class="product-card">
+                                <img class="product-img" src="{{ url_for('static', filename='images/stock (28).jpg') }}"
+                                    alt="Specialty Drinks">
+                                <div class="carousel-caption">
+                                    <h3 class="lead">Specialty Drinks</h3>
+                                    <p class="details">Our specialty drinks are unique and exciting creations that
+                                        you
+                                        won't find anywhere else. From lavender lattes to matcha tea lattes, we've
+                                        got
+                                        something for everyone.</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="carousel-item">
+                            <div class="product-card">
+                                <img class="product-img" src="{{ url_for('static', filename='images/stock (31).jpg') }}"
+                                    alt="Iced Drinks">
+                                <div class="carousel-caption">
+                                    <h3 class="lead">Iced Drinks</h3>
+                                    <p class="details">On a hot day, there's nothing better than one of our
+                                        refreshing
+                                        iced
+                                        drinks. From iced coffee to iced tea, we've got a variety of delicious
+                                        options
+                                        to choose from.</p>
+                                </div>
+                        </article>
+                        <article class="carousel-item">
+                            <div class="product-card">
+                                <img class="product-img" src="{{ url_for('static', filename='images/stock (14).jpg') }}"
+                                    alt="Snacks and Pastries">
+                                <div class="carousel-caption">
+                                    <h3 class="lead">Snacks and Pastries</h3>
+                                    <p class="details">Pair your favorite drink with one of our delicious snacks or
+                                        pastries. We offer a variety of options, including croissants, muffins, and
+                                        scones, as well as healthy choices like fruit cups and yogurt parfaits.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <a class="carousel-control-prev" href="#product-carousel" role="button" data-bs-slide="prev">
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#product-carousel" role="button" data-bs-slide="next">
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="our-team">
+        <h2>Our Team</h2>
+        <div class="all-persons">
+            <div class="person">
+                <img src="{{ url_for('static', filename='images/johndoe.jpg') }}" class="Avatar" alt="John Doe">
+                <div class="card-info">
+                    <h3 class="card-title">John Doe</h3>
+                    <p class="card-subtitle">Head Barista</p>
+                    <ul class="card-social">
+                        <li class="no-bullets"><a class="svg"><i class="bi bi-instagram me-2"></i></a>
+                        </li>
+                        <li class="no-bullets"><a class="svg"><i class="bi bi-youtube me-2"></i></a></li>
+
+                        <li class="no-bullets"><a class="svg"><i class="bi bi-linkedin me-2"></i></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="person">
+                <img src="{{ url_for('static', filename='images/janedoe.jpg') }}" class="Avatar" alt="Jane Doe">
+                <div class="card-info">
+                    <h3 class="card-title">Jane Doe</h3>
+                    <p class="card-subtitle">Roaster</p>
+                    <ul class="card-social">
+                        <li class="no-bullets"><a class="svg"><i class="bi bi-instagram me-2"></i></a>
+                        </li>
+                        <li class="no-bullets"><a class="svg"><i class="bi bi-youtube me-2"></i></a></li>
+                        <li class="no-bullets"><a class="svg"><i class="bi bi-linkedin me-2"></i></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="person">
+                <img src="{{ url_for('static', filename='images/jimdoe.jpg') }}" class="Avatar" alt="Jim Doe">
+                <div class="card-info">
+                    <h3 class="card-title">Jim Doe</h3>
+                    <p class="card-subtitle">Marketing Manager</p>
+                    <ul class="card-social">
+                        <li class="no-bullets"><a class="svg"><i class="bi bi-instagram me-2"></i></a>
+                        </li>
+                        <li class="no-bullets"><a class="svg"><i class="bi bi-youtube me-2"></i></a></li>
+                        <li class="no-bullets"><a class="svg"><i class="bi bi-linkedin me-2"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="person">
+                <img src="{{ url_for('static', filename='images/ginadoe.jpg') }}" class="Avatar" alt="Gina Doe">
+                <div class="card-info">
+                    <h3 class="card-title">Gina Doe</h3>
+                    <p class="card-subtitle">Roaster</p>
+                    <ul class="card-social">
+                        <li class="no-bullets"><a class="svg"><i class="bi bi-instagram me-2"></i></a>
+                        </li>
+                        <li class="no-bullets"><a class="svg"><i class="bi bi-youtube me-2"></i></a></li>
+
+                        <li class="no-bullets"><a class="svg"><i class="bi bi-linkedin me-2"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</main>
+<script>
+    // Get the carousel element
+    const carousel = document.querySelector('.carousel');
+
+    // Get the carousel indicators
+    const indicators = Array.from(carousel.querySelectorAll('.indicator'));
+
+    // Get the carousel items
+    const items = Array.from(carousel.querySelectorAll('.carousel-item'));
+
+    // Get the previous and next buttons
+    const prevButton = carousel.querySelector('.carousel-control-prev');
+    const nextButton = carousel.querySelector('.carousel-control-next');
+
+    // Set the initial slide
+    let currentSlide = 0;
+
+    // Show the current slide
+    function showSlide() {
+        // Hide all slides
+        items.forEach(item => item.classList.remove('active'));
+        // Show the current slide
+        items[currentSlide].classList.add('active');
+        // Update the indicators
+        indicators.forEach((indicator, index) => {
+            if (index === currentSlide) {
+                indicator.classList.add('active');
+                indicator.setAttribute('aria-current', 'true');
+                indicator.setAttribute('tabindex', '0');
+            } else {
+                indicator.classList.remove('active');
+                indicator.setAttribute('aria-current', 'false');
+                indicator.setAttribute('tabindex', '-1');
+            }
+        });
+    }
+
+    // Go to the next slide
+    function nextSlide() {
+        currentSlide++;
+        if (currentSlide >= items.length) {
+            currentSlide = 0;
+        }
+        showSlide();
+    }
+
+    // Go to the previous slide
+    function prevSlide() {
+        currentSlide--;
+        if (currentSlide < 0) {
+            currentSlide = items.length - 1;
+        }
+        showSlide();
+    }
+
+    // Add event listeners to the buttons
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+
+    // Add event listeners to the indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide();
+        });
+    });
+
+    // Show the initial slide
+    showSlide();
+
+</script>
+{% endblock %}
