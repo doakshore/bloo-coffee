@@ -1,37 +1,3 @@
-/* Set the root color palette */
-:root {
-  /* Primary Colors */
-  --primary-color: #F8F8FF;
-  /* Off White */
-  --secondary-color: #19171B;
-  /* Dark Charcoal */
-  --accent-color: #FFC107;
-  /* Amber */
-  --accent-color2: #F446C2;
-  /* Rich Berry */
-  --accent-color3: #F27346;
-  --color-text: #19171B;
-  --color-text2: #fff;
-
-  /* Text Colors */
-  --main-text-color: var(--secondary-color);
-  --subtitle-color: var(--accent-color);
-  --hover-color: var(--accent-color3);
-  --font-family-base: 'Lato', sans-serif;
-  --font-size-base: 1.6rem;
-
-  /* New styles for transitions */
-  --hover-opacity: 0.2;
-  --spread: 10px;
-}
-
-/* Global styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* Style the Our Story section */
 #our-story {
   background-color: var(--primary-color);
@@ -90,8 +56,8 @@
 }
 
 
-/* Team section */
-#our-team {
+/* Our Values Section */
+#our-values {
   background-color: var(--primary-color);
   padding: 80px 0;
   display: flex;
@@ -99,22 +65,336 @@
   align-items: center;
 }
 
-#our-team h2 {
-  font-size: 3.6rem;
+#our-values h2 {
+  font-size: 3rem;
+  font-weight: bold;
   text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+.values-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+
+}
+
+.value-card {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+
+.value-card:hover {
+  transform: scale(1.05);
+
+}
+
+.value-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: var(--hover-color);
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: -1;
+  opacity: var(--hover-opacity);
+  transition: all 0.5s ease-in-out;
+}
+
+.value-card:hover::before {
+  transform: translate(-50%, -50%) rotate(55deg);
+  opacity: 1;
+}
+
+.value-card img {
+  --size: 570px;
+  width: var(--size);
+  height: calc(var(--size) * 16 / 9);
+  /* Set height to maintain 9:16 ratio */
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.value-card .value-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--color-text2);
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.value-card:hover .value-text {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.value-card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--color-text2);
+}
+
+.value-card-subtitle {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: var(--color-text2);
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 767px) {
+  .values-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Our Products section */
+#our-products {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 0 0;
+}
+
+/* Products heading */
+#our-products h2 {
+  font-size: 3.6rem;
   margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Products carousel */
+
+/* Set the dimensions and aspect ratio of the product card */
+.product-card {
+  width: 100vw;
+  height: 47.619vw;
+  /* This is the equivalent of 21:9 aspect ratio */
+  max-width: 2560px;
+  max-height: 1080px;
+  overflow: hidden;
+  position: relative;
+  /* Added to make absolute positioning of image possible */
+}
+
+/* Set the dimensions and position of the product image */
+.product-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* Centers the image within the parent element */
+}
+
+
+/* Set the position of the image for each product */
+/* Adjust to move image up or down */
+/* Adjust to move image left or right */
+.product-card img[alt='Classic Favorites'] {
+  top: 10%;
+  left: 50%;
+}
+
+.product-card img[alt='Seasonal Specials'] {
+  top: 30%;
+  left: 50%;
+}
+
+.product-card img[alt='Specialty Drinks'] {
+  top: 69%;
+  left: 50%;
+}
+
+.product-card img[alt='Iced Drinks'] {
+  top: 33%;
+  left: 50%;
+}
+
+.product-card img[alt='Snacks and Pastries'] {
+  top: 25%;
+  left: 50%;
+}
+
+/* Set the position and size of the carousel caption */
+.carousel-caption {
+  object-fit: cover;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: 'Lato', sans-serif;
+  color: var(--color-text2);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  bottom: 20px;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column; /* add this */
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* Center align the lead text */
+.lead {
+  font-size: 3rem;
+  color: var(--text-color);
+  margin-bottom: 1rem; /* add some bottom margin */
+  text-align: center;
+}
+
+/* Center align the details text */
+.details {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+
+/* Carousel indicators */
+#product-carousel .carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#product-carousel .carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: var(--light-color);
+  background-clip: padding-box;
+  border: none;
+  border-radius: 50%;
+}
+
+#product-carousel .carousel-indicators .active {
+  background-color: var(--secondary-color);
+}
+
+
+
+/* Carousel controls */
+#product-carousel .carousel-control-prev,
+#product-carousel .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  margin-top: -22.5px;
+  filter: blur(25px);
+  padding: 15px;
+  border-radius: 50%;
+
+  text-align: center;
+  background-color: var(--color-text2);
+  opacity: 25%;
+  transition: all 0.5s ease-in-out;
+}
+
+#product-carousel .carousel-control-prev:hover,
+#product-carousel .carousel-control-next:hover {
+  transform: scale(1.2);
+  filter: blur(20px);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+#product-carousel .carousel-control-prev:focus,
+#product-carousel .carousel-control-next:focus {
+  outline: none;
+  box-shadow: none;
+  color: var(--secondary-color);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#product-carousel .carousel-control-prev span,
+#product-carousel .carousel-control-next span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+}
+
+#product-carousel .carousel-control-prev {
+  left: 15px;
+}
+
+#product-carousel .carousel-control-next {
+  right: 15px;
+}
+
+/* Team section */
+#our-team {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#our-team h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
 }
 
 .all-persons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
 }
 
 
 /* Person card */
 .person {
-  width: 290px;
+  width: auto;
   height: 354px;
   padding: 2rem 1.5rem;
   margin: 1rem;
@@ -207,289 +487,4 @@
 /* Remove bullets from list */
 .no-bullets {
   list-style: none;
-}
-
-
-/*Our-values*/
-
-#our-values {
-  background-color: var(--primary-color);
-  padding: 80px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#our-values h2 {
-  font-size: 3.6rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.container-values {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
-  gap: 3rem;
-  justify-content: center;
-}
-
-.value-card {
-  background-color: var(--primary-color);
-  color: var(--color-text);
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  padding: 0;
-  transition: all 0.3s ease-in-out;
-  display: flex;
-  overflow: hidden;
-
-}
-
-.value-card:hover {
-  background-color: var(--secondary-color);
-  color: var(--color-text2);
-  overflow: hidden;
-  transform: translateY(-5px);
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  align-items: center;
-
-}
-
-.value-card:hover .value-img:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.value-card img {
-  --size: 400px;
-  width: var(--size);
-  height: calc(var(--size) * 16 / 9);
-  object-fit: cover;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  max-width: 100%;
-  max-height: 100%;
-}
-
-/* Updated styles for transitions */
-.value-card:hover img {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  filter: blur(30px);
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
-  transform: scale(1.1);
-}
-
-.value-card:hover img+.value-text {
-  display: flex;
-
-}
-
-.value-text {
-  position: relative;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-/*hover text*/
-.value-card:hover .value-text {
-  display: flex;
-}
-
-.value-card:hover .value-card-subtitle {
-  display: block;
-}
-
-
-
-/* Our Products section */
-#our-products {
-  background-color: var(--primary-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 80px 0 0;
-}
-
-/* Products heading */
-#our-products h2 {
-  font-size: 3.6rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: var(--text-color);
-}
-
-/* Products carousel */
-
-/* Set the dimensions and aspect ratio of the product card */
-.product-card {
-  width: 100vw;
-  height: 47.619vw;
-  /* This is the equivalent of 21:9 aspect ratio */
-  max-width: 2560px;
-  max-height: 1080px;
-  overflow: hidden;
-  position: relative;
-  /* Added to make absolute positioning of image possible */
-}
-
-/* Set the dimensions and position of the product image */
-.product-img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  /* Centers the image within the parent element */
-}
-
-
-/* Set the position of the image for each product */
-/* Adjust to move image up or down */
-/* Adjust to move image left or right */
-.product-card img[alt='Classic Favorites'] {
-  top: 10%;
-  left: 50%;
-}
-
-.product-card img[alt='Seasonal Specials'] {
-  top: 30%;
-  left: 50%;
-}
-
-.product-card img[alt='Specialty Drinks'] {
-  top: 69%;
-  left: 50%;
-}
-
-.product-card img[alt='Iced Drinks'] {
-  top: 33%;
-  left: 50%;
-}
-
-.product-card img[alt='Snacks and Pastries'] {
-  top: 25%;
-  left: 50%;
-}
-
-/* Set the position and size of the carousel caption */
-.carousel-caption {
-  object-fit: cover;
-  border-radius: 10px;
-  font-family: 'Lato', sans-serif;
-  color: var(--color-text2);
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 10px 20px;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
-/* Center align the lead text */
-.lead {
-  font-size: 2rem;
-  color: var(--text-color);
-}
-
-/* Center align the details text */
-.details {
-  font-size: 1.6rem;
-  color: var(--text-color);
-}
-
-
-/* Carousel indicators */
-#product-carousel .carousel-indicators {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#product-carousel .carousel-indicators li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: var(--light-color);
-  background-clip: padding-box;
-  border: none;
-  border-radius: 50%;
-}
-
-#product-carousel .carousel-indicators .active {
-  background-color: var(--secondary-color);
-}
-
-
-
-/* Carousel controls */
-#product-carousel .carousel-control-prev,
-#product-carousel .carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: auto;
-  margin-top: -22.5px;
-  filter: blur(25px);
-  padding: 15px;
-  border-radius: 50%;
-
-  text-align: center;
-  background-color: var(--color-text2);
-  opacity: 25%;
-  transition: all 0.5s ease-in-out;
-}
-
-#product-carousel .carousel-control-prev:hover,
-#product-carousel .carousel-control-next:hover {
-  transform: scale(1.2);
-  filter: blur(20px);
-  transition: all 0.3s ease-in-out;
-}
-
-
-
-#product-carousel .carousel-control-prev:focus,
-#product-carousel .carousel-control-next:focus {
-  outline: none;
-  box-shadow: none;
-  color: var(--secondary-color);
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-#product-carousel .carousel-control-prev span,
-#product-carousel .carousel-control-next span {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-}
-
-#product-carousel .carousel-control-prev {
-  left: 15px;
-}
-
-#product-carousel .carousel-control-next {
-  right: 15px;
 }

@@ -1,35 +1,29 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block title %} Contact {% endblock %} {% block
+  styles %}
+  <!-- Add any additional styles here -->
+  <link rel="stylesheet" href="/static/css/vote.css" />
+  {% endblock %} {% block content %}
+  
 
-{% block title %} Vote {% endblock %}
-{% block styles %}
-{{ super() }}
-{% endblock %}
 
+<main class="container my-5">
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Vote</h1>
+    <p class="lead">We would love to hear your favorite flavor!</p>
 
-{% block content %}
-
-<body>
-  <main class="container my-5">
-    <div class="jumbotron text-center">
-      <h1 class="display-4">Vote</h1>
-      <p class="lead">We would love to hear your favorite flavor!</p>
-    </div>
     <h2 class="text-center mb-4">Submit Your Favorite Flavor</h2>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <div class="alert alert-success">
-      {% for message in messages %}
-      {{ message }}
-      {% endfor %}
-    </div>
-    {% endif %}
-    {% endwith %}
+  </div>
+  {% with messages = get_flashed_messages() %} {% if messages %}
+  <div class="alert alert-success">
+    {% for message in messages %} {{ message }} {% endfor %}
+  </div>
+  {% endif %} {% endwith %}
     <form method="POST" class="animate__animated animate__fadeIn">
       <div class="form-signin">
         <label for="name">Name:</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" required>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" required />
         <label for="email">Email address:</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Example@gmail.com" required>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Example@gmail.com" required />
         <label for="flavor">Favorite Flavor:</label>
         <select class="form-control" id="flavor" name="flavor" required>
           <option value="">-- Select a Flavor --</option>
@@ -39,12 +33,13 @@
         </select>
       </div>
       <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
-        <label class="form-check-label" for="terms">I agree to the <a href="#" target="_blank" class="terms-link">terms
-            and conditions</a>.</label>
+        <input type="checkbox" class="form-check-input" id="terms" name="terms" required />
+        <label class="form-check-label" for="terms">I agree to the
+          <a href="#" target="_blank" class="terms-link">terms and conditions</a>.</label>
       </div>
-      <button type="submit" class="btn btn-primary btn-block btn-lg">Submit</button>
+      <button type="submit" class="btn btn-primary btn-block btn-lg">
+        Submit
+      </button>
     </form>
   </main>
-</body>
 {% endblock %}

@@ -1,0 +1,108 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+  font-family: var(--font-family-base);
+}
+
+/* Main content section */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.jumbotron {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.jumbotron h1 {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+
+.jumbotron p {
+  font-size: 24px;
+  color: var(--main-text-color);
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.alert {
+  font-size: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background-color: var(--accent-color2);
+  color: var(--color-text2);
+}
+
+.form-signin {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 40px;
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-text2);
+  color: var(--secondary-color);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 var(--spread) var(--accent-color);
+}
+
+.form-check-label {
+  font-size: 20px;
+  color: var(--secondary-color);
+}
+
+.terms-link {
+  color: var(--accent-color);
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 5px;
+  color: var(--color-text2);
+}
+
+.btn-primary:hover {
+  background-color: var(--hover-color);
+  opacity: var(--hover-opacity);
+}

@@ -1,36 +1,23 @@
 {% extends "base.html" %}
+{% block title %} login {% endblock %}
 
-{% block title %}
-login
-{% endblock %}
 {% block styles %}
-
-
+<link rel="stylesheet" href="/static/css/login.css">
 {% endblock %}
-
 {% block content %}
-
-
-<!-- Custom styles for this template -->
-
-<body>
-    <main class="container my-5">
-        <div class="jumbotron text-center">
-            <img class="mb-3" src="{{ url_for('static',filename='images/logobloo.png')}}" alt="" width="100"
-                height="100">
-            <h1 class="display-4">Login</h1>
-            <form action="http://127.0.0.1:5000/login" method="post" class="form-signin">
-                <!-- Added form tag with action and method attributes, and form class -->
-                <input autocomplete="off" autofocus class="form-control" id="username" name="username"
-                    placeholder="Username" type="text">
-                <input class="form-control" id="password" name="password" placeholder="Password" type="password">
-                <button class="btn btn-lg btn-primary btn-block btn-login" type="submit">Log In</button>
-                <!-- Added custom class btn-login for the button and adjust margin top using CSS -->
-                {% if error %}
-                <div class="alert alert-danger">{{ error }}</div>
-                {% endif %}
-            </form>
-        </div>
-    </main>
-</body>
+<main class="login-container">
+    <div class="login-form">
+        <h1 class="login-title">Login</h1>
+        <form action="http://127.0.0.1:5000/login" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" autocomplete="off" required />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit" class="btn-login">Log In</button>
+        </form>
+        {% if error %}
+        <div class="login-error">{{ error }}</div>
+        {% endif %}
+    </div>
+</main>
 {% endblock %}

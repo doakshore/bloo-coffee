@@ -1,114 +1,251 @@
-/* Custom styles for Admin panel */
-
-/* Style for the container */
-
-/* Global styles */
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Fonts */
+body {
+  font-family: var(--font-family-base);
+}
+
+/* Main content section */
+.container {
+  max-width: 2160px;
+  margin: 0 auto;
+}
+
+/* Tab navigation */
+.nav-tabs {
+  border-bottom: none;
+  justify-content: center;
+}
+
+.nav-link {
+  font-size: 20px;
+  color: var(--main-text-color);
+  border: none;
+  border-radius: 0;
+  padding: 10px 20px;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background-color: var(--secondary-color);
+  color: var(--color-text2);
+}
+
+/* Tab content */
+.tab-content {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.tab-pane {
+  display: none;
+  padding-top: 20px;
+}
+
+.tab-pane.show {
+  display: block;
+}
+
+/* Card */
+.card {
+  margin-top: 50px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--main-text-color);
+  padding: 50px;
+  background-color: var(--primary-color);
+  border-radius: 5px 5px 0 0;
+}
+
+.card-body {
+  padding: 50px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-weight: bold;
+  background-color: var(--primary-color);
+}
+
+tr:hover {
+  background-color: var(--primary-color);
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  margin-left: 5px;
+  float: right;
+  border: none;
+  background-color: var(--primary-color);
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.dataTables_wrapper .dataTables_length {
+  margin-left: 5px;
+  font-size: 16px;
+  color: var(--main-text-color);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  background-color: var(--primary-color);
+  color: var(--main-text-color);
+  margin-left: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background-color: var(--hover-color);
+  color: var(--color-text2);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background-color: var(--accent-color);
+  color: var(--color-text2);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+  background-color: var(--primary-color);
+  color: var(--main-text-color);
+  cursor: not-allowed;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+  background-color: var(--primary-color);
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.dataTables_wrapper .dataTables_info {
+  margin-left: 5px;
+  font-size: 16px;
+  color: var(--main-text-color);
+}
+
+/* Add custom styles for demo purposes */
+body {
+  background-color: var(--primary-color);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-base);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: var(--hover-opacity);
+}
+
+.btn {
+  background-color: var(--accent-color);
+  color: var(--color-text2);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-color2);
+}
+
+.btn-primary {
+  background-color: var(--accent-color3);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color2);
+}
 
 .container {
-    margin-top: 30px;
-  }
+  padding: 20px;
+}
 
-  /* Style for the card header */
-  .card-header {
-    background-color: #1e88e5;
-    color: #fff;
-    font-size: 24px;
-    font-weight: 700;
-  }
+.card-header {
+  background-color: var(--secondary-color);
+  color: var(--color-text2);
+}
 
-  /* Style for the tab links */
-  .nav-link {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1e88e5;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-bottom: none;
-    border-radius: 5px 5px 0 0;
-    margin-right: 10px;
-  }
+.card-body {
+  background-color: var(--primary-color);
+}
 
-  /* Style for the active tab link */
-  .nav-link.active {
-    background-color: #1e88e5;
-    color: #fff;
-    border: 1px solid #1e88e5;
-  }
+.dataTables_wrapper .dataTables_filter input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0px 0px var(--spread) var(--accent-color);
+}
 
-  /* Style for the tab panes */
-  .tab-pane {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-top: none;
-    border-radius: 0 5px 5px 5px;
-    padding: 20px;
-  }
+.dataTables_wrapper .dataTables_length label,
+.dataTables_wrapper .dataTables_paginate {
+  display: flex;
+  align-items: center;
+}
 
-  /* Style for the table in the tab panes */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
+.dataTables_wrapper .dataTables_length select {
+  margin-left: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--main-text-color);
+}
 
-  th, td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-  }
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous,
+.dataTables_wrapper .dataTables_paginate .paginate_button.next {
+  margin-left: auto;
+}
 
-  th {
-    background-color: #2196F3;
-    color: #fff;
-  }
+.dataTables_wrapper .dataTables_paginate .ellipsis {
+  margin-left: 5px;
+  margin-right: 5px;
+}
 
-  /* Style for the "Add Flavor" and "Add Admin" buttons */
-  .btn {
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
-    background-color: #2196F3;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    margin-top: 10px;
-  }
-
-  .btn:hover {
-    background-color: #1565c0;
-    color: #fff;
-    cursor: pointer;
-  }
-
-  /* Responsive design */
-  @media screen and (max-width: 768px) {
-    /* Style for the tab links on small screens */
-    .nav-link {
-      font-size: 16px;
-      margin-bottom: 10px;
-      margin-right: 0;
-    }
-
-    /* Style for the tab panes on small screens */
-    .tab-pane {
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-
-    /* Style for the table on small screens */
-    table {
-      font-size: 14px;
-    }
-
-    /* Style for the "Add Flavor" and "Add Admin" buttons on small screens */
-    .btn {
-      font-size: 16px;
-      margin-top: 20px;
-    }
-  }
+.dataTables_wrapper .dataTables_paginate .paginate_button,
+.dataTables_wrapper .dataTables_length label {
+  color: var(--main-text-color);
+}

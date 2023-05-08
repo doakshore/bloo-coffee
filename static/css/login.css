@@ -1,0 +1,81 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+  font-family: var(--font-family-base);
+}
+
+/* Login form */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+}
+
+.login-form {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  box-shadow: 0 var(--spread) var(--spread) rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+.login-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--color-text);
+  background-color: var(--primary-color);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--accent-color);
+}
+
+.btn-login {
+  padding: 10px;
+  background-color: var(--accent-color);
+  color: var(--color-text2);
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  opacity: var(--hover-opacity);
+  background-color: var(--hover-color);
+}
