@@ -10,7 +10,4 @@ We take the security of our users seriously, which is why we've included passwor
 
 In summary, Bloo Coffee is a user-friendly web application that allows users to vote for their favorite coffee flavor and administrators to manage the database. Our sleek and stylish templates, combined with our reliable framework, create a seamless user experience that will keep you coming back for more. So why wait? Cast your vote now and join the Bloo Coffee community!
 
-Link to youtube demo:
-
-https://www.youtube.com/watch?v=0Q41Fer0t8Y
-
+All image made with Ai using: Chatgpt+Dall-E
