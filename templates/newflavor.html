@@ -2,12 +2,19 @@
 
 {% block title %} Add New Flavor {% endblock %}
 
+{% block styles %}
+<link rel="stylesheet" href="/static/css/newflavor.css" />
+{% endblock %}
+
 {% block content %}
-<main class="container my-5">
-  <div class="card text-center">
-    <h1 class="card-header">New Flavor</h1>
+<main class="page-container">
+  <div class="card-container">
+    <div class="card-heading">
+      <button onclick="goBack()" class="back-button">Back</button>
+      <h1 class="card-heading">New Flavor</h1>
+    </div>
     <div class="card-body">
-      <p class="card-text">Add a new product to the database!</p>
+      <p class="card-description">Add a new product to the database!</p>
       <form action="/newflavor" method="post" class="animate__animated animate__fadeIn">
         <div class="mb-3">
           <label for="flavor_name" class="form-label">Name:</label>
@@ -31,4 +38,11 @@
     </div>
   </div>
 </main>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
 {% endblock %}

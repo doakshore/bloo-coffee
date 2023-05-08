@@ -1,14 +1,12 @@
-{% extends "base.html" %}
-
-{% block title %}
-Admin
-{% endblock %}
-{% block styles %}
-<!-- Add any additional styles here -->
-<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script><!-- Layout for data table -->
-<link rel="stylesheet" href="/static/css/admin.css">
-{% endblock %}
-{% block content %}
+{% extends "base.html" %} {% block title %} Admin {% endblock %} {% block styles
+    %}
+    <!-- Add any additional styles here -->
+    <link rel="stylesheet" href="/static/css/admin.css" />
+    {% endblock %} {% block scripts %}
+    <!-- Layout for data table -->
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    
+    {% endblock %} {% block content %}
     <main class="container">
         <div class="card text-center">
             <h1 class="card-header">Welcome to the Admin Panel</h1>
@@ -69,5 +67,5 @@ Admin
             </div>
         </div>
     </main>
-</body>
-{% endblock %}
+    
+    {% endblock %}
