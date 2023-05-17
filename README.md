@@ -11,4 +11,7 @@ Our project is built on a Flask web application that serves several routes. It u
 We take the security of our users seriously, which is why we've included password hashing and verification functionality using werkzeug.security and email validation using validate_email.
 
 In summary, Bloo Coffee is a user-friendly web application that allows users to vote for their favorite coffee flavor and administrators to manage the database. Our sleek and stylish templates, combined with our reliable framework, create a seamless user experience that will keep you coming back for more. So why wait? Cast your vote now and join the Bloo Coffee community!
+![2023-05-17](https://github.com/doakshore/bloo-coffee/assets/89141083/2beb94cd-e035-44dd-8689-321836b4d554)
+
+
 
