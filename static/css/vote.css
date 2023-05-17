@@ -10,10 +10,13 @@ body {
   font-family: var(--font-family-base);
 }
 
+
 /* Main content section */
-.container {
-  max-width: 960px;
+.main-container {
+  max-width: 1080px;
   margin: 0 auto;
+  color: var(--primary-color);
+
 }
 
 .jumbotron {
@@ -41,6 +44,94 @@ h2 {
   text-align: center;
   margin-bottom: 20px;
 }
+
+
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: -1;
+  opacity: var(--hover-opacity);
+  transition: all 0.5s ease-in-out;
+}
+
+.product-card:hover::before {
+  transform: translate(-50%, -50%) rotate(55deg);
+  opacity: 1;
+}
+
+.product-card img {
+  --size: 300px; /* Change the value here to adjust the size */
+  height: calc(var(--size) * 16 / 9);
+  width: var(--size);
+  margin-bottom: 0.5rem; /* Adjust the margin here */
+  margin-top: 0.5rem; /* Adjust the margin here */
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.product-card .product-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--color-text2);
+  font-size: 1.8rem; /* Adjust the font size here */
+  font-weight: bold;
+  padding: 0.8rem; /* Adjust the padding here */
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.product-card:hover .product-info {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.product-card .product-info h1 {
+  font-size: 1.6rem; /* Adjust the font size here */
+  font-weight: bold;
+  margin-bottom: 8px; /* Adjust the margin here */
+  color: var(--color-text2);
+}
+
+.product-card .product-info p {
+  font-size: 1.0rem; /* Adjust the font size here */
+  margin-bottom: 16px; /* Adjust the margin here */
+  color: var(--color-text2);
+}
+
 
 .alert {
   font-size: 20px;

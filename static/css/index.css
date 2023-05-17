@@ -38,7 +38,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f8f8;
+  background-color: var(--primary-color);
 }
 
 .container {
@@ -56,11 +56,12 @@ body {
 .brand-title {
   font-size: 48px;
   font-weight: bold;
-  color: #333;
+  color:var(--main-text-color );
+
 }
 
 .brand-description {
   font-size: 24px;
-  color: #333;
+  color:var(--subtitle-color);
   text-align: center;
 }

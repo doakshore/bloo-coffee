@@ -1,16 +1,17 @@
 /* Set the root color palette */
 :root {
-  --primary-color: #f8f8ff;
+ --primary-color: #f8f8ff;
   --secondary-color: #19171b;
   --accent-color: #ffc107;
   --accent-color2: #f446c2;
   --accent-color3: #f27346;
   --color-text: #19171b;
   --color-text2: #fff;
+  --color-text3: #14042d;
 
   /* Text Colors */
   --main-text-color: var(--secondary-color);
-  --subtitle-color: var(--accent-color);
+  --subtitle-color: var(--color-text3);
   --hover-color: var(--accent-color3);
   --font-family-base: "Lato", sans-serif;
   --font-size-base: 1.6rem;
