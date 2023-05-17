@@ -3,248 +3,236 @@
 {% block title %}
 login
 {% endblock %}
+
 {% block styles %}
-<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-<link rel="stylesheet" href="/static/css/products.css">
+<link rel="stylesheet" href="/static/css/test.css">
+<!-- Add Owl Carousel CSS file -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 {% endblock %}
 
 {% block content %}
-
-<div id="products" class="image-carousel owl-carousel">
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+<main id="products">
+  <section class="product-container owl-carousel" id="product-carousel">
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Mocha Madness.jpg') }}" alt="Mocha Madness">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Mocha Madness</h1>
         <p>A delicious blend of rich espresso and creamy chocolate, perfect for any chocolate lover</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Cinnamon Swirl.jpg') }}" alt="Cinnamon Swirl">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Cinnamon Swirl</h1>
         <p>Warm cinnamon and smooth espresso combine in this comforting beverage, reminiscent of fresh-baked
           cinnamonrolls</p>
       </div>
     </figure>
-  </div>
 
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Toffee Temptation.jpg') }}" alt="Toffee Temptation">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Toffee Temptation</h1>
         <p>This indulgent drink features the rich, buttery flavor of toffee, paired with smooth espresso for a
           decadent
           treat.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Raspberry Ripple.jpg') }}" alt="Raspberry Ripple">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Raspberry Ripple</h1>
         <p>Sweet and tangy raspberry syrup pairs perfectly with espresso to create a fruity and refreshing
           drink.</p>
       </div>
     </figure>
-  </div>
 
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Pumpkin Spice.jpg') }}" alt="Pumpkin Spice">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Pumpkin Spice</h1>
         <p>Warm spices like cinnamon, nutmeg, and cloves are combined with creamy pumpkin flavor and espresso
           to create
           a classic fall favorite.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Peppermint Patty.jpg') }}" alt="Peppermint Patty">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Peppermint Patty</h1>
         <p>Cool and refreshing peppermint syrup is the perfect complement to rich espresso and velvety
           steamed milk.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Banana Bonanza.jpg') }}" alt="Banana Bonanza">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Banana Bonanza</h1>
         <p>Sweet banana syrup and smooth espresso come together to create a creamy and delicious coffee
           drink.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Coconut Cream Pie.jpg') }}" alt="Coconut Cream Pie">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Coconut Cream Pie</h1>
         <p>Creamy coconut flavor is paired with rich espresso and steamed milk, creating a drink that's
           reminiscent of a
           delicious slice of coconut cream pie.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Gingerbread Delight.jpg') }}" alt="Gingerbread Delight">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Gingerbread Delight</h1>
         <p>Warm spices like ginger, cinnamon, and nutmeg are combined with sweet gingerbread syrup and
           espresso,
           creating a festive holiday drink.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Vanilla Velvet.jpg') }}" alt="Vanilla Velvet">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Vanilla Velvet</h1>
         <p>Smooth vanilla syrup and rich espresso come together in this simple but satisfying coffee
           beverage.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Blueberry Blast.jpg') }}" alt="Blueberry Blast">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Blueberry Blast</h1>
         <p>Juicy blueberry syrup adds a fruity twist to this classic coffee drink, making it a
           refreshing option for
           any time of day.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Cherry Cheesecake.jpg') }}" alt="Cherry Cheesecake">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Cherry Cheesecake</h1>
         <p>Sweet cherry syrup pairs perfectly with rich espresso and creamy steamed milk,
           creating a drink that's
           reminiscent of cherry cheesecake.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Hazelnut Heaven.jpg') }}" alt="Hazelnut Heaven">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Hazelnut Heaven</h1>
         <p>Nutty hazelnut syrup adds a rich and delicious flavor to this classic coffee
           beverage.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Caramel Carnival.jpg') }}" alt="Caramel Carnival">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Caramel Carnival</h1>
         <p>Sweet caramel syrup and rich espresso combine to create a decadent and delicious
           coffee treat.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Strawberry Shortcake.jpg') }}"
         alt="Strawberry Shortcake">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Strawberry Shortcake</h1>
         <p>Fresh strawberry syrup and creamy steamed milk combine to create a sweet and
           refreshing coffee drink that's
           perfect for summer.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Chocolate Cherry.jpg') }}" alt="Chocolate Cherry">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Chocolate Cherry</h1>
         <p>Decadent chocolate syrup and sweet cherry syrup combine with rich espresso
           and velvety steamed milk to
           create a deliciously indulgent coffee beverage.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Cinnamon Roll.jpg') }}" alt="Cinnamon Roll">
-      <div class=" carousel-item-overlay">
+      <div class=" product-info">
         <h1>Cinnamon Roll</h1>
         <p>Warm cinnamon syrup and rich espresso come together to create a comforting
           and delicious coffee drink that's
           perfect for breakfast.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Almond Amaretto.jpg') }}" alt="Almond Amaretto">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Almond Amaretto</h1>
         <p>Nutty almond syrup and smooth espresso combine to create a delicious
           coffee beverage that's perfect for any
           almond lover.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <figure class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Crunchy Moccachino.jpg') }}" alt="Crunchy Moccachino">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Crunchy Moccachino</h1>
         <p>Crunchy bits of toffee or nuts are added to a classic mochaccino,
           creating a delicious and satisfying drink
           that's perfect for any time of day.</p>
       </div>
     </figure>
-  </div>
-  <div class="item">
-    <div class="carousel-image-wrapper">
+
+    <figure class="product-card">
       <img src="{{ url_for('static', filename='images/products/Butterscotch Bliss.jpg') }}" alt="Butterscotch Bliss">
-      <div class="carousel-item-overlay">
+      <div class="product-info">
         <h1>Butterscotch Bliss</h1>
         <p>Sweet butterscotch syrup and rich espresso combine to create a creamy
           and indulgent coffee beverage that's
           perfect for any sweet tooth.</p>
       </div>
-    </div>
-  </div>
-</div>
-</div>
+    </figure>
+  </section>
+</main>{% endblock %}
+
+{% block scripts %}
+<!-- Add Owl Carousel JavaScript file -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 <script>
-  $(document).ready(function () {
-
-    $(".owl-carousel").owlCarousel({
-
-      autoPlay: 3000, //Set AutoPlay to 3 seconds
-
-      items: 3,
-      itemsDesktop: [1199, 3],
-      itemsDesktopSmall: [979, 3]
-
+  // Initialize Owl Carousel
+  $(document).ready(function(){
+    $('#product-carousel').owlCarousel({
+      items: 3, // Adjust the number of items shown per slide
+      margin: 20, // Adjust the spacing between items
+      loop: true, // Enable looping
+      autoplay: true, // Enable autoplay
+      autoplayTimeout: 3000, // Set autoplay interval in milliseconds
+      responsive: {
+        // Configure responsive breakpoints
+        0: {
+          items: 1 // Show 1 item on small screens (less than 600px)
+        },
+        600: {
+          items: 2 // Show 2 items on medium screens (600px and above)
+        },
+        1000: {
+          items: 5 // Show 5 items on large screens (1000px and above)
+        }
+      }
     });
-
   });
 </script>
-{% endblock %}
-{% block scripts %}
-<script src="jquery.min.js"></script>
-<script src="owlcarousel/owl.carousel.min.js"></script>
 {% endblock %}
